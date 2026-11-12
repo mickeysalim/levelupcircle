@@ -1,0 +1,154 @@
+{
+  "linkedin-makeover": {
+    "name": "LinkedIn Makeover", "t1": "LinkedIn", "t2": "Makeover", "kicker": "Guidebook + recording", "badge": "Start here",
+    "hook": "Glow up your LinkedIn profile in 7 days. By the end of the week, you'll click Apply with confidence.",
+    "price": "Rp168.000", "was": "", "unit": "one-time",
+    "cta": "Get the guidebook", "ctaShort": "Get it now", "link": "https://lynk.id/hey.mickmok/0y32459yg1g3",
+    "after": "sent to your email right away", "cover": "light",
+    "coverLines": ["A 7-day guide, step by step", "Session recording", "Level Up Circle community"],
+    "line": "Make your profile one recruiters actually stop on, step by step.",
+    "why": {
+      "title": "Because LinkedIn matters",
+      "body": "I've seen how seriously LinkedIn is used in Singapore and beyond. Many of my peers, me included, got opportunities because a recruiter reached out on LinkedIn.",
+      "points": ["Recruiters check it before they even look at your CV.", "Opportunities often come from LinkedIn connections.", "A polished profile helps you stand out in a sea of professionals."]
+    },
+    "get": [
+      {"t": "Guidebook", "d": "Clear daily steps to follow, 15–20 minutes a day."},
+      {"t": "Session recording", "d": "Watch the online session at your own pace."},
+      {"t": "Level Up Circle community", "d": "Find accountability partners doing the challenge with you."}
+    ],
+    "topicsLabel": "By day 7, you'll have",
+    "topics": ["A professional-looking profile that builds trust instantly", "An authentic story that shows your strengths and results", "A profile that's easier for recruiters to find"],
+    "how": ["Get the guidebook and recording in your email", "Spend 15–20 minutes a day on one step", "Finish the week with a profile you're proud of"],
+    "forList": ["You haven't touched your LinkedIn in a while", "You're applying for roles abroad or at global companies", "You want recruiters to find you"],
+    "note": "Treat this like a challenge. Small steps every day add up, and by the end of the week you'll see the difference. Want personal feedback after? Add a LinkedIn Audit.",
+    "signoff": "Mickey", "related": ["linkedin-audit", "cv-audit"]
+  },
+  "working-in-singapore": {
+    "name": "Working in Singapore", "t1": "Working in", "t2": "Singapore", "kicker": "Guidebook + recording", "badge": "Most popular",
+    "hook": "Your guide to the Singapore job scene, from work passes and job search to culture and cost of living. Based on personal experience. Practical, no fluff.",
+    "price": "Rp168.000", "was": "", "unit": "one-time",
+    "cta": "Get the guidebook", "ctaShort": "Get it now", "link": "https://lynk.id/hey.mickmok/7x3k8rmg4y89",
+    "after": "sent to your email right away", "cover": "dark",
+    "coverLines": ["Work passes, explained", "Finding jobs and applying", "Culture and cost of living"],
+    "line": "Work passes, job search, culture and cost of living. What I wish I'd known.",
+    "why": {
+      "title": "What I wish I'd known before moving",
+      "body": "Moving to Singapore for work comes with a lot of questions. This guide puts the answers in one place, so you can plan with a clear picture.",
+      "points": []
+    },
+    "get": [
+      {"t": "Guidebook", "d": "Everything in one place, with references to learn more."},
+      {"t": "Deep-dive session recording", "d": "Work passes and the job market, explained in detail."},
+      {"t": "Level Up Circle community", "d": "Connect with others on the same path."}
+    ],
+    "topicsLabel": "What's inside",
+    "topics": ["Work passes: Employment Pass, S Pass and what they mean", "The Shortage Occupation List and in-demand fields", "Finding job openings and applying", "Getting your CV and LinkedIn ready", "Office culture and cost of living"],
+    "how": ["Check out on Lynk", "Get the guidebook and recording in your email", "Read, watch, and start planning your move"],
+    "forList": ["You're thinking about working in Singapore", "You're a fresh grad or experienced, and want a clear picture first", "You don't have an offer yet and want to set the right expectations"],
+    "quote": {"text": "This guidebook is a cheat book for dummies. Everyone who wants to start living and working in Singapore must read this!", "who": "Edwin", "what": "Working in Singapore"},
+    "note": "Singapore is very doable, as long as you know how it works. This is everything I'd tell a friend over coffee.",
+    "signoff": "Mickey", "related": ["one-on-one", "cv-audit"]
+  },
+  "cv-audit": {
+    "name": "CV Audit", "t1": "CV", "t2": "Audit", "kicker": "Personal feedback", "badge": "",
+    "hook": "Ngerasa CV kamu udah bagus, tapi kok nggak ada panggilan interview? Often it's not your experience. It's how you tell it.",
+    "price": "Rp199.000", "was": "", "unit": "one-time",
+    "cta": "Start my CV audit", "ctaShort": "Start my audit", "link": "https://lynk.id/hey.mickmok/5mp2opy685ek",
+    "after": "report in 3 working days", "cover": "dark",
+    "coverLines": ["A report for every CV section", "Feedback for your target role", "ATS check and next steps"],
+    "line": "A personal report on your CV, with an ATS check, in 3 working days.",
+    "why": {
+      "title": "Let me tell you exactly what to fix",
+      "body": "I've reviewed CVs from Indonesians applying for global roles through my content and community. This audit is a full, honest, section-by-section look at yours.",
+      "points": []
+    },
+    "get": [
+      {"t": "A personal Notion report", "d": "Feedback on every section of your CV."},
+      {"t": "Feedback for your target role", "d": "Specific and actionable, not generic tips."},
+      {"t": "ATS check and next steps", "d": "Make sure your CV gets past the filters, and know what to do next."}
+    ],
+    "how": ["Check out on Lynk, then share your CV on Google Drive with your target role(s)", "I review your CV and write your personal report", "Your report arrives in your email within 3 working days"],
+    "forList": ["You're actively job hunting or planning a career move", "You want to apply for global roles with confidence", "You have a CV but aren't sure it's strong enough to get noticed"],
+    "note": "Your experience deserves to be seen. Let's make sure your CV shows it.",
+    "signoff": "Mickey", "related": ["linkedin-audit", "one-on-one"]
+  },
+  "linkedin-audit": {
+    "name": "LinkedIn Audit", "t1": "LinkedIn", "t2": "Audit", "kicker": "Personal feedback", "badge": "",
+    "hook": "Send me your profile. I'll tell you, section by section, what to fix first.",
+    "price": "Rp199.000", "was": "", "unit": "one-time",
+    "cta": "Start my LinkedIn audit", "ctaShort": "Start my audit", "link": "https://lynk.id/hey.mickmok/5o01gk25wdmk",
+    "after": "report in 3 working days", "cover": "light",
+    "coverLines": ["Section-by-section report", "What to fix first", "Ready in 3 working days"],
+    "line": "Section-by-section feedback on your profile, and what to fix first.",
+    "why": {
+      "title": "A second pair of eyes",
+      "body": "It's hard to judge your own profile. I'll look at it the way a recruiter would, and tell you honestly what's working and what isn't.",
+      "points": []
+    },
+    "get": [
+      {"t": "A personal audit report", "d": "Feedback on every section of your profile, from headline to experience."},
+      {"t": "What to fix first", "d": "Clear priorities, so you know where to start."}
+    ],
+    "how": ["Check out on Lynk, then share your LinkedIn link and target role", "I review your profile and write your report", "Your report arrives in your email within 3 working days"],
+    "forList": ["Your profile isn't getting recruiter views", "You've done the LinkedIn Makeover and want personal feedback", "You're about to start job hunting"],
+    "note": "A few small changes can make a big difference. I'll show you which ones matter most for you.",
+    "signoff": "Mickey", "related": ["linkedin-makeover", "cv-audit"]
+  },
+  "one-on-one": {
+    "name": "1:1 with Mickey", "t1": "1:1 with", "t2": "Mickey", "kicker": "Most personal", "badge": "",
+    "hook": "One hour, all about you. Your situation, your questions, your plan.",
+    "price": "Rp899.000", "was": "", "unit": "/ 1 hour",
+    "cta": "Book my session", "ctaShort": "Book now", "link": "https://lynk.id/hey.mickmok/xzrkdo0mqzpr",
+    "after": "one hour on Google Meet", "cover": "dark",
+    "coverLines": ["One hour on Google Meet", "Your questions, answered", "A written action plan"],
+    "line": "One hour on Google Meet, all about you, with a written action plan.",
+    "why": {
+      "title": "Advice for your exact situation",
+      "body": "Guidebooks cover what works for most people. A 1:1 is for when your situation is your own: your field, your timing, your goals.",
+      "points": []
+    },
+    "get": [
+      {"t": "One hour on Google Meet", "d": "Just you and me, focused on your goals."},
+      {"t": "Honest, insider advice", "d": "How companies actually think and hire."},
+      {"t": "A written action plan", "d": "Clear next steps you can keep coming back to."}
+    ],
+    "how": ["Book on Lynk, then fill in the short form in your confirmation email", "We meet on Google Meet for one hour", "You get a written action plan after the session"],
+    "forList": ["You've done the work, but can't see why nothing's moving", "You're weighing a big move and want a second opinion", "You want advice for your exact situation, not general tips"],
+    "quote": {"text": "What sets Mickey apart is her genuine insider perspective… I left with clarity I couldn't find anywhere else.", "who": "Sadha", "what": "1:1 session"},
+    "note": "Bring your questions, big or small. We'll leave with a plan.",
+    "signoff": "Mickey", "related": ["cv-audit", "working-in-singapore"]
+  },
+  "study-in-singapore": {
+    "name": "Study in Singapore", "t1": "Study in", "t2": "Singapore", "kicker": "Guidebook + recording", "badge": "With Sentre",
+    "hook": "Penasaran gimana rasanya jadi pelajar Indonesia di Singapura? Get a complete school guide, plus a recording of three ASEAN scholars sharing their stories.",
+    "price": "Rp199.000", "was": "", "unit": "one-time",
+    "cta": "Get the guidebook", "ctaShort": "Get it now", "link": "https://lynk.id/hey.mickmok/nrd4gd2xrq41",
+    "after": "sent to your email right away", "cover": "light",
+    "coverLines": ["Study in Singapore guidebook", "3 ASEAN scholars share their stories", "In collaboration with Sentre"],
+    "line": "A school guide for parents and students, plus a recording of 3 ASEAN scholars.",
+    "why": {
+      "title": "Real stories from real scholars",
+      "body": "A recorded sharing session with 3 ASEAN Scholarship recipients from different cities in Indonesia, different schools and backgrounds. Moderated by me, in collaboration with Sentre.",
+      "points": []
+    },
+    "get": [
+      {"t": "Study in Singapore guidebook", "d": "A complete school guide for parents and students."},
+      {"t": "Session recording: ASEAN Scholar Stories", "d": "Three scholars share their journey. Watch at your own pace."}
+    ],
+    "topicsLabel": "In the recording",
+    "topics": ["Applying for the ASEAN Scholarship", "Adapting, academically and socially", "Daily life as a student in Singapore", "How to prepare before applying"],
+    "peopleTitle": "Meet the speakers",
+    "people": [
+      {"n": "Kautsar", "s": "St. Andrew's Junior College", "f": "From Yogyakarta"},
+      {"n": "Noriko", "s": "Raffles Institution", "f": "From Jakarta"},
+      {"n": "Marcio", "s": "Anglo-Chinese School (Independent)", "f": "From Jakarta"},
+      {"n": "Mickey", "s": "Moderator", "f": "@hey.mickmok"}
+    ],
+    "how": ["Check out on Lynk", "Get the guidebook and recording in your email", "Read, watch, and plan your next step"],
+    "forList": ["Parents considering school in Singapore for their child", "Students curious about the ASEAN Scholarship", "Anyone who wants to hear from scholars directly"],
+    "partner": {"title": "Sentre", "body": "Sentre is a social initiative started by Indonesian students in Singapore. Their mission: help Indonesian middle and high school students reach their potential and become future leaders, through mentorship, sharing and a supportive community."},
+    "note": "Hearing it from someone who's been there makes all the difference. I hope this helps you plan with confidence.",
+    "signoff": "Mickey & Sentre", "related": ["working-in-singapore", "one-on-one"]
+  }
+}
