@@ -13,7 +13,7 @@
     "ctaShort": "Get it now",
     "link": "https://lynk.id/hey.mickmok/0y32459yg1g3/checkout",
     "cover": "light",
-    "line": "Make your profile one recruiters actually stop on, step by step.",
+    "line": "A step-by-step guide to give your LinkedIn profile a glow up.",
     "why": {
       "title": "Because LinkedIn matters",
       "body": "Many of my peers, me included, got opportunities because a recruiter found us on LinkedIn.",
@@ -39,7 +39,7 @@
     ],
     "topicsLabel": "By day 7, you'll have",
     "topics": [
-      "A professional-looking profile that builds trust instantly",
+      "A professional-looking profile that builds trust",
       "An authentic story that shows your strengths and results",
       "A profile that's easier for recruiters to find"
     ],
@@ -57,7 +57,10 @@
       "linkedin-audit",
       "cv-audit"
     ],
-    "coverQuote": "Treat this like a challenge. Small steps every day add up."
+    "coverQuote": "Treat this like a challenge. Small steps every day add up.",
+    "notFor": [
+      "Not a done-for-you service. You make the edits yourself, with clear steps to follow."
+    ]
   },
   "working-in-singapore": {
     "name": "Working in Singapore",
@@ -120,7 +123,10 @@
       "one-on-one",
       "cv-audit"
     ],
-    "coverQuote": "Singapore is very doable, as long as you know how it works."
+    "coverQuote": "Singapore is very doable, as long as you know how it works.",
+    "notFor": [
+      "Not legal or immigration advice. For official rules, always check the Ministry of Manpower (MOM) website."
+    ]
   },
   "cv-audit": {
     "name": "CV Audit",
@@ -153,7 +159,7 @@
       },
       {
         "t": "ATS check and next steps",
-        "d": "Make sure your CV gets past the filters, and know what to do next."
+        "d": "Check that applicant tracking systems (ATS) can read your CV, and know what to do next."
       }
     ],
     "how": [
@@ -170,7 +176,11 @@
       "linkedin-audit",
       "one-on-one"
     ],
-    "coverQuote": "Your experience deserves to be seen."
+    "coverQuote": "Your experience deserves to be seen.",
+    "notFor": [
+      "Not a CV rewrite. I tell you what to change and why, and you make the edits.",
+      "Not a job guarantee. A stronger CV improves your chances, but hiring decisions are up to the company."
+    ]
   },
   "linkedin-audit": {
     "name": "LinkedIn Audit",
@@ -189,7 +199,7 @@
     "line": "Section-by-section feedback on your profile, and what to fix first.",
     "why": {
       "title": "A second pair of eyes",
-      "body": "It's hard to judge your own profile. I'll look at it the way a recruiter would, and tell you honestly what's working and what isn't.",
+      "body": "It's hard to judge your own profile. I'll look at it with fresh eyes and tell you honestly what's working and what isn't.",
       "points": []
     },
     "get": [
@@ -216,7 +226,10 @@
       "linkedin-makeover",
       "cv-audit"
     ],
-    "coverQuote": "A few small changes can make a big difference."
+    "coverQuote": "A few small changes can make a big difference.",
+    "notFor": [
+      "Not a profile rewrite. You get a report with clear fixes, and you make the edits."
+    ]
   },
   "one-on-one": {
     "name": "1:1 with Mickey",
@@ -245,7 +258,7 @@
       },
       {
         "t": "Honest, insider advice",
-        "d": "How companies actually think and hire."
+        "d": "From someone who has worked inside global companies."
       },
       {
         "t": "A written action plan",
@@ -271,7 +284,10 @@
       "cv-audit",
       "working-in-singapore"
     ],
-    "coverQuote": "Bring your questions, big or small. We'll leave with a plan."
+    "coverQuote": "Bring your questions, big or small. You'll leave with a plan.",
+    "notFor": [
+      "Not a job placement or referral service."
+    ]
   },
   "study-in-singapore": {
     "name": "Study in Singapore",
@@ -350,6 +366,9 @@
       "working-in-singapore",
       "one-on-one"
     ],
-    "coverQuote": "Hearing it from someone who's been there makes all the difference."
+    "coverQuote": "Hearing it from someone who's been there makes all the difference.",
+    "notFor": [
+      "Not a school admissions or scholarship application service."
+    ]
   }
 }

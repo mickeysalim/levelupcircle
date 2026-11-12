@@ -82,11 +82,14 @@ def page(slug, p):
         </div>
       </div>'''
 
+    CROSS = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5DCCB" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>'
+    not_for = "\n".join(f'          <div class="check check--not">{CROSS}<span>{e(t)}</span></div>' for t in p.get("notFor", []))
+
     quote = ""
     if p.get("quote"):
         q = p["quote"]
         quote = f'''
-  <section class="section" style="padding-bottom: 0">
+  <section class="section">
     <figure class="pdp-quote reveal">
       <blockquote>"{e(q["text"])}"</blockquote>
       <figcaption><strong>{e(q["who"])}</strong> <span class="muted">· {e(q["what"])}</span></figcaption>
@@ -98,7 +101,7 @@ def page(slug, p):
     if p.get("partner"):
         pa = p["partner"]
         partner = f'''
-  <section class="section" style="padding-bottom: 0">
+  <section class="section">
     <div class="partner">
       <div>
         <span class="eyebrow">In collaboration with</span>
@@ -111,7 +114,6 @@ def page(slug, p):
 
     related = "\n".join(
         f'''        <a class="rel" href="{r}.html">
-          <span class="rel__cover rel__cover--{DATA[r]["cover"]}" aria-hidden="true"><span>{e(DATA[r]["t1"])}</span><em>{e(DATA[r]["t2"])}</em></span>
           <span class="rel__body">
             <span class="prog__tag">{e(DATA[r]["kicker"])}</span>
             <span class="rel__name">{e(DATA[r]["t1"])} <span class="accent">{e(DATA[r]["t2"])}</span></span>
@@ -203,6 +205,7 @@ def page(slug, p):
       </div>
       <div>
 {checks(p["forList"], CHECK_DARK)}
+{not_for}
       </div>{how}
     </div>
   </section>
