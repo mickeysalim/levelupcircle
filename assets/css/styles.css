@@ -85,7 +85,11 @@ section[id] { scroll-margin-top: 72px; }
 .brand__sub { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); white-space: nowrap; }
 .nav__cta { padding: 13px 20px; font-size: 13px; white-space: nowrap; }
 .nav__back { font-weight: 700; font-size: 14px; text-decoration: none; padding: 12px 0; white-space: nowrap; }
-@media (max-width: 400px) { .brand__sub { display: none; } }
+@media (max-width: 560px) {
+  .brand { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .brand__name { font-size: 18px; line-height: 1.1; }
+  .brand__sub { font-size: 10px; }
+}
 
 /* ---------- Hero ---------- */
 .hero { padding: clamp(40px, 7vw, 112px) 0 clamp(56px, 8vw, 120px); }
@@ -98,6 +102,8 @@ section[id] { scroll-margin-top: 72px; }
 @media (max-width: 860px) {
   .hero .wrap { grid-template-columns: 1fr; gap: 32px; }
   .hero__photo { order: -1; justify-self: center; max-width: 260px; }
+  .hero__text { gap: 18px; }
+  .hero__text .eyebrow { margin-bottom: -6px; }
 }
 
 /* ---------- 01 Sound familiar ---------- */
