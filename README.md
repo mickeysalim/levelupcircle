@@ -20,7 +20,7 @@ vercel.json                Clean URLs (/programs/cv-audit) and asset caching
 ## Editing
 
 - **Landing page copy or prices:** edit `index.html`.
-- **Program pages:** edit `tools/programs.json`, then run `python3 tools/build_programs.py`. Don't edit `programs/*.html` by hand; they are overwritten.
+- **Program pages:** edit `tools/programs.json`, then run `python3 tools/build_programs.py` (this also refreshes the version stamp on the CSS/JS links, so browsers pick up changes). Don't edit `programs/*.html` by hand; they are overwritten.
 - **Next live session:** there's a commented-out strip in `index.html` under "Next live session". Fill it in and remove the comment markers.
 
 ## Preview locally
