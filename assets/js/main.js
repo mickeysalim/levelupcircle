@@ -37,15 +37,14 @@
     start();
   }
 
-  // Programs: on phones only the first two show until "See more" is tapped
-  var more = document.querySelector('[data-programs-more]');
-  if (more) {
-    more.addEventListener('click', function () {
-      var grid = document.getElementById(more.getAttribute('aria-controls'));
-      grid.classList.add('is-expanded');
-      more.setAttribute('aria-expanded', 'true');
+  // "Read more" links on phones: reveal the collapsed block they point to
+  document.querySelectorAll('[data-expand]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = document.getElementById(btn.getAttribute('data-expand'));
+      if (target) target.classList.add('is-expanded');
+      btn.setAttribute('aria-expanded', 'true');
     });
-  }
+  });
 
   // Product page: sticky buy bar appears once the main buy button scrolls away
   var bar = document.querySelector('[data-buybar]');

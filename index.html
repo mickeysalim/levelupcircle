@@ -50,7 +50,7 @@
   <section class="section dark" id="start">
     <div class="wrap">
       <div class="familiar__intro reveal">
-        <span class="eyebrow">01 — Sound familiar?</span>
+        <span class="eyebrow">Sound familiar?</span>
         <p class="familiar__quote">Udah kerja keras, tapi karir rasanya <span class="accent">gak kemana-mana.</span></p>
         <p class="familiar__sub">Tenang, kamu gak sendirian. I've been there too. Here's where I'd start.</p>
       </div>
@@ -97,15 +97,13 @@
         </div>
       </div>
       <div class="about__text reveal">
-        <span class="eyebrow">02 — About me</span>
+        <span class="eyebrow">About me</span>
         <h2 class="h-section">The insider <span class="accent">who shares</span></h2>
         <p>I'm a MarTech lead with 8+ years inside global companies like IBM, Accenture and Samsung, across Hong Kong and Singapore. I've hit the same walls many of you are facing now, and I've learned how to get past them.</p>
+        <button class="more-link" data-expand="about-more" aria-controls="about-more" aria-expanded="false">Read more ↓</button>
+        <div class="about__more" id="about-more">
         <p>My mission is to bring more Indonesians to the global stage. So I share what actually works: <strong>how global companies think, how to present yourself, and how to keep growing once you're in.</strong></p>
         <p>I share it every week on <a href="https://instagram.com/hey.mickmok" target="_blank" rel="noopener">@hey.mickmok</a>, and as Deputy Head of the Indonesian Professional Association in Singapore. Level Up Circle is where we go deeper, with guides and 1:1 support built from real experience.</p>
-        <div class="stats">
-          <div><span class="stat__num">8+ years</span><span class="stat__label">in Hong Kong and Singapore</span></div>
-          <div><span class="stat__num">3</span><span class="stat__label">global companies: IBM, Accenture and Samsung</span></div>
-          <div><span class="stat__num">20+</span><span class="stat__label">Indonesians abroad interviewed</span></div>
         </div>
         <a href="#programs" class="link-under">See how I can help →</a>
       </div>
@@ -115,12 +113,13 @@
   <!-- 03 Testimonials -->
   <section class="section dark">
     <div class="wrap quotes">
-      <span class="eyebrow">03 — What people say</span>
+      <span class="eyebrow">What people say</span>
       <figure class="quote-big reveal">
         <blockquote>"I was convinced I wasn't good enough. I tried everything, but nothing happened. <span class="accent">One hour with Mickey changed everything.</span>"</blockquote>
         <figcaption><strong>Sadha</strong> <span class="quote-by">· 1:1 session</span></figcaption>
       </figure>
-      <div class="quote-grid reveal">
+      <button class="more-link" data-expand="more-quotes" aria-controls="more-quotes" aria-expanded="false">Read 2 more ↓</button>
+      <div class="quote-grid reveal" id="more-quotes">
         <figure class="quote">
           <blockquote>"This guidebook is a cheat book for dummies. Everyone who wants to start living and working in Singapore must read this! I personally read it dozens of times."</blockquote>
           <figcaption><strong>Edwin</strong> <span class="quote-by">· Working in Singapore</span></figcaption>
@@ -137,19 +136,20 @@
   <section class="section" id="programs">
     <div class="wrap">
       <div class="programs__head">
-        <span class="eyebrow">04 — Programs</span>
+        <span class="eyebrow">Programs</span>
         <h2 class="h-section">Pick your <span class="accent">next step</span></h2>
       </div>
 
-      <div class="prog-grid" id="prog-grid">
+      <div class="collapsible" id="programs-list">
+      <div class="prog-grid">
         <article class="prog">
           <span class="prog__tag prog__tag--terra">Start here</span>
           <h3 class="h-card"><a href="programs/linkedin-makeover.html">LinkedIn <span class="accent">Makeover</span></a></h3>
           <p class="prog__desc">Make your profile one recruiters actually stop on, step by step.</p>
           <span class="prog__spacer"></span>
           <span class="prog__inc">Guidebook + recording + community</span>
-          <div class="prog__price"><strong>Rp168.000</strong><a href="programs/linkedin-makeover.html">Details</a></div>
-          <a href="https://lynk.id/hey.mickmok/0y32459yg1g3" class="btn btn--dark">Get it now</a>
+          <span class="prog__price">Rp168.000</span>
+          <a href="programs/linkedin-makeover.html" class="btn btn--dark">See details</a>
         </article>
 
         <article class="prog">
@@ -159,8 +159,8 @@
           <p class="prog__quote">"Gak sugar-coating, tapi bantu kita dengan reality check." <span>— Carolus</span></p>
           <span class="prog__spacer"></span>
           <span class="prog__inc">Guidebook + session recording</span>
-          <div class="prog__price"><strong>Rp168.000</strong><a href="programs/working-in-singapore.html">Details</a></div>
-          <a href="https://lynk.id/hey.mickmok/7x3k8rmg4y89" class="btn btn--dark">Get it now</a>
+          <span class="prog__price">Rp168.000</span>
+          <a href="programs/working-in-singapore.html" class="btn btn--dark">See details</a>
         </article>
 
         <article class="prog prog--extra">
@@ -169,8 +169,8 @@
           <p class="prog__desc">Send me your profile. I'll write back, section by section, with what to fix first.</p>
           <span class="prog__spacer"></span>
           <span class="prog__inc">Audit report in 3 working days</span>
-          <div class="prog__price"><strong>Rp199.000</strong><a href="programs/linkedin-audit.html">Details</a></div>
-          <a href="https://lynk.id/hey.mickmok/5o01gk25wdmk" class="btn btn--ghost">Start my audit</a>
+          <span class="prog__price">Rp199.000</span>
+          <a href="programs/linkedin-audit.html" class="btn btn--ghost">See details</a>
         </article>
 
         <article class="prog prog--extra">
@@ -179,13 +179,13 @@
           <p class="prog__desc">Send me your CV and target role. You get a personal report with an ATS check, within 3 working days.</p>
           <span class="prog__spacer"></span>
           <span class="prog__inc">Audit report in 3 working days</span>
-          <div class="prog__price"><strong>Rp199.000</strong><a href="programs/cv-audit.html">Details</a></div>
-          <a href="https://lynk.id/hey.mickmok/5mp2opy685ek" class="btn btn--ghost">Start my audit</a>
+          <span class="prog__price">Rp199.000</span>
+          <a href="programs/cv-audit.html" class="btn btn--ghost">See details</a>
         </article>
       </div>
-      <button class="btn btn--ghost btn--block prog-more" data-programs-more aria-controls="prog-grid" aria-expanded="false">See 2 more programs ↓</button>
+      <button class="more-link" data-expand="programs-list" aria-controls="programs-list" aria-expanded="false" style="margin-top: 12px">See 4 more programs ↓</button>
 
-      <article class="one" id="book">
+      <article class="one prog--extra" id="book">
         <div class="one__text">
           <span class="eyebrow">Most personal</span>
           <h3 class="h-card">1:1 with <span class="accent">Mickey</span></h3>
@@ -194,12 +194,11 @@
         </div>
         <div class="one__buy">
           <div class="one__price"><strong>Rp899.000</strong><span>/ 1 hour</span></div>
-          <a href="https://lynk.id/hey.mickmok/xzrkdo0mqzpr" class="btn btn--light">Book my session</a>
-          <a href="programs/one-on-one.html" class="one__details">How it works →</a>
+          <a href="programs/one-on-one.html" class="btn btn--light">See how it works</a>
         </div>
       </article>
 
-      <div class="also">
+      <div class="also prog--extra">
         <div class="also__text">
           <span class="prog__tag">In collaboration with Sentre · For parents</span>
           <span class="also__name">Study in Singapore</span>
@@ -210,13 +209,14 @@
           <a href="programs/study-in-singapore.html" class="btn btn--ghost">See guidebook</a>
         </div>
       </div>
+      </div>
 
       <p class="checkout-note">Secure checkout on Lynk. Guidebooks are sent to your email right after you pay.</p>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section band faq">
+  <section class="section--compact band faq">
     <div class="wrap">
       <h2>Questions</h2>
       <div class="faq__list">
@@ -241,11 +241,10 @@
   </section>
 
   <!-- Past sessions -->
-  <section class="section" id="events">
+  <section class="section--compact" id="events">
     <div class="wrap">
       <div class="past__head">
         <h2 class="h-section">Past <span class="accent">sessions</span></h2>
-        <img class="past__logo" src="/assets/img/level-up-circle-logo.png" alt="Level Up Circle, a community by Mickey Salim" width="516" height="493" loading="lazy">
       </div>
       <div class="past__list">
         <div class="past__item">
@@ -268,30 +267,29 @@
     </div>
   </section>
 
-  <!-- 05 Instagram -->
-  <section class="section band">
+  <!-- Instagram: latest posts. To add or swap a post: add an <a class="ig__post"> with the post link and its cover in assets/img. -->
+  <section class="section--compact band">
     <div class="wrap">
       <div class="ig__head">
         <div>
-          <span class="eyebrow">05 — On @hey.mickmok</span>
+          <span class="eyebrow">On @hey.mickmok</span>
           <h2 class="h-section">Real stories, <span class="accent">twice a week</span></h2>
+          <p>Career Talk Reels and Singapore Life stories, including my series Settling In My 30s.</p>
         </div>
         <a href="https://instagram.com/hey.mickmok" target="_blank" rel="noopener" class="btn btn--ghost">Follow on Instagram</a>
       </div>
-      <div class="ig__grid">
-        <a class="ig__item" href="https://instagram.com/hey.mickmok" target="_blank" rel="noopener">
+      <div class="ig__list">
+        <a class="ig__post" href="https://instagram.com/hey.mickmok" target="_blank" rel="noopener" aria-label="Career Talk on Instagram">
           <img src="/assets/img/ig-career-talk.jpg" alt="Career Talk Reel cover: Mickey interviewing a guest" width="720" height="900" loading="lazy">
-          <span class="ig__kind">Reels</span>
-          <span class="h-card">Career <span class="accent">Talk</span></span>
-          <span class="ig__desc">Conversations with Indonesians building careers abroad.</span>
-          <span class="ig__go">Watch on Instagram →</span>
+          <span>Career Talk</span>
         </a>
-        <a class="ig__item" href="https://instagram.com/hey.mickmok" target="_blank" rel="noopener">
+        <a class="ig__post" href="https://instagram.com/hey.mickmok" target="_blank" rel="noopener" aria-label="Singapore Life on Instagram">
           <img src="/assets/img/ig-singapore-life.jpg" alt="Singapore Life carousel cover" width="720" height="900" loading="lazy">
-          <span class="ig__kind">Carousels + Reels</span>
-          <span class="h-card">Singapore <span class="accent">Life</span></span>
-          <span class="ig__desc">Life in Singapore as an Indonesian, including my short series, Settling In My 30s.</span>
-          <span class="ig__go">See on Instagram →</span>
+          <span>Singapore Life</span>
+        </a>
+        <a class="ig__post" href="https://instagram.com/hey.mickmok" target="_blank" rel="noopener" aria-label="Settling In My 30s on Instagram">
+          <img src="/assets/img/ig-settling.jpg" alt="Settling In My 30s episode 1 cover" width="720" height="900" loading="lazy">
+          <span>Settling In My 30s</span>
         </a>
       </div>
     </div>

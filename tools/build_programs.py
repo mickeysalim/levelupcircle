@@ -12,39 +12,48 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA = json.loads((ROOT / "tools" / "programs.json").read_text(encoding="utf-8"))
 OUT = ROOT / "programs"
+# Audits and the 1:1 have a real process to explain; guidebooks don't.
+HAS_HOW = {"cv-audit", "linkedin-audit", "one-on-one"}
 
 CHECK_LIGHT = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4C6A51" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>'
 CHECK_DARK = CHECK_LIGHT.replace("#4C6A51", "#F5DCCB")
 LOCK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>'
+BOLT = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>'
 
-e = lambda s: escape(s, quote=True)
+
+def e(s):
+    return escape(s, quote=True)
 
 
-def checks(items, icon):
-    return "\n".join(f'          <div class="check">{icon}<span>{e(t)}</span></div>' for t in items)
+def checks(items, icon, indent="          "):
+    return "\n".join(f'{indent}<div class="check">{icon}<span>{e(t)}</span></div>' for t in items)
+
+
+def access_label(slug):
+    if slug == "one-on-one":
+        return "1 hour on Google Meet"
+    if slug in HAS_HOW:
+        return "Report in 3 working days"
+    return "Instant access by email"
 
 
 def page(slug, p):
-    title = f'{e(p["t1"])} <span class="accent">{e(p["t2"])}</span>'
     plain_title = f'{p["t1"]} {p["t2"]}'
     badge = f'<span class="badge">{e(p["badge"])}</span>' if p.get("badge") else ""
-    was = f'<span style="text-decoration: line-through">{e(p["was"])}</span>' if p.get("was") else ""
-    cover_lines = "".join(f'<div><b>{i:02d}</b><span>{e(t)}</span></div>' for i, t in enumerate(p["coverLines"], 1))
+    was = f'<s>{e(p["was"])}</s>' if p.get("was") else ""
+    meta = f'\n        <p class="meta">{e(p["meta"])}</p>' if p.get("meta") else ""
 
-    why_points = checks(p["why"].get("points", []), CHECK_LIGHT)
+    why_points = checks(p["why"].get("points", []), CHECK_LIGHT, "        ")
     get_items = "\n".join(
-        f'        <div class="get__item"><span class="get__num">{i:02d}</span><strong>{e(g["t"])}</strong><span>{e(g["d"])}</span></div>'
+        f'          <div class="get__item"><span class="get__num">{i:02d}</span><div><strong>{e(g["t"])}</strong><span>{e(g["d"])}</span></div></div>'
         for i, g in enumerate(p["get"], 1))
-
     topics = ""
     if p.get("topics"):
         topics = f'''
-      <div class="topics">
-        <h3>{e(p["topicsLabel"])}</h3>
-        <div>
+        <div class="topics">
+          <h3>{e(p["topicsLabel"])}</h3>
 {checks(p["topics"], CHECK_LIGHT)}
-        </div>
-      </div>'''
+        </div>'''
 
     speakers = ""
     if p.get("people"):
@@ -54,14 +63,24 @@ def page(slug, p):
         speakers = f'''
   <section class="section speakers" style="padding-top: 0">
     <div class="wrap">
-      <h2>{e(p.get("peopleTitle", "Meet the speakers"))}</h2>
+      <h2>Meet the <span class="accent">speakers</span></h2>
       <div class="speakers__grid">
 {cards}
       </div>
     </div>
-  </section>'''
+  </section>
+'''
 
-    steps = "\n".join(f'          <div class="step"><span class="step__n">{i}</span><p>{e(t)}</p></div>' for i, t in enumerate(p["how"], 1))
+    how = ""
+    if slug in HAS_HOW:
+        steps = "\n".join(f'          <div class="step"><span class="step__n">{i}</span><p>{e(t)}</p></div>' for i, t in enumerate(p["how"], 1))
+        how = f'''
+      <div class="how">
+        <span class="eyebrow">How it works</span>
+        <div class="steps">
+{steps}
+        </div>
+      </div>'''
 
     quote = ""
     if p.get("quote"):
@@ -72,7 +91,8 @@ def page(slug, p):
       <blockquote>"{e(q["text"])}"</blockquote>
       <figcaption><strong>{e(q["who"])}</strong> <span class="muted">· {e(q["what"])}</span></figcaption>
     </figure>
-  </section>'''
+  </section>
+'''
 
     partner = ""
     if p.get("partner"):
@@ -86,14 +106,18 @@ def page(slug, p):
         <p>{e(pa["body"])}</p>
       </div>
     </div>
-  </section>'''
+  </section>
+'''
 
     related = "\n".join(
         f'''        <a class="rel" href="{r}.html">
-          <span class="prog__tag">{e(DATA[r]["kicker"])}</span>
-          <span class="rel__name">{e(DATA[r]["t1"])} <span class="accent">{e(DATA[r]["t2"])}</span></span>
-          <span class="rel__line">{e(DATA[r]["line"])}</span>
-          <span class="rel__foot"><strong>{e(DATA[r]["price"])}</strong><span>See details →</span></span>
+          <span class="rel__cover rel__cover--{DATA[r]["cover"]}" aria-hidden="true"><span>{e(DATA[r]["t1"])}</span><em>{e(DATA[r]["t2"])}</em></span>
+          <span class="rel__body">
+            <span class="prog__tag">{e(DATA[r]["kicker"])}</span>
+            <span class="rel__name">{e(DATA[r]["t1"])} <span class="accent">{e(DATA[r]["t2"])}</span></span>
+            <span class="rel__line">{e(DATA[r]["line"])}</span>
+            <span class="rel__foot"><strong>{e(DATA[r]["price"])}</strong><span>See details →</span></span>
+          </span>
         </a>''' for r in p["related"])
 
     return f'''<!DOCTYPE html>
@@ -129,20 +153,17 @@ def page(slug, p):
 <main>
   <section class="pdp-hero">
     <div class="wrap">
-      <div class="cover cover--{p["cover"]}" aria-hidden="true">
-        <span class="cover__top">Level Up Circle by Mickey Salim</span>
-        <div class="cover__title">{e(p["t1"])}<em>{e(p["t2"])}</em></div>
-        <div class="cover__lines">{cover_lines}</div>
-      </div>
-      <div class="buy">
+      <div class="pdp-hero__text">
         <div class="buy__tags"><span class="eyebrow">{e(p["kicker"])}</span>{badge}</div>
-        <h1>{title}</h1>
+        <h1>{e(p["t1"])} <span class="accent">{e(p["t2"])}</span></h1>
         <p class="lead">{e(p["hook"])}</p>
-        <div class="buy__box">
-          <div class="buy__price"><strong>{e(p["price"])}</strong>{was}<span>{e(p["unit"])}</span></div>
-          <a href="{e(p["link"])}" class="btn btn--primary" data-buy-anchor>{e(p["cta"])}</a>
-          <span class="buy__note">{LOCK} Secure checkout on Lynk · {e(p["after"])}</span>
-        </div>
+        <p class="pull">"{e(p["coverQuote"])}" <span>— Mickey</span></p>{meta}
+      </div>
+      <div class="buycard">
+        <div class="buycard__price"><strong>{e(p["price"])}</strong>{was}<span>{e(p["unit"])}</span></div>
+        <span class="access">{BOLT}{e(access_label(slug))}</span>
+        <a href="{e(p["link"])}" class="btn btn--primary" data-buy-anchor>{e(p["cta"])}</a>
+        <span class="buy__note">{LOCK} Secure checkout on Lynk</span>
       </div>
     </div>
   </section>
@@ -150,7 +171,7 @@ def page(slug, p):
   <section class="section band why">
     <div class="wrap">
       <div class="why__head">
-        <span class="eyebrow">01 — Why this exists</span>
+        <span class="eyebrow">Why this exists</span>
         <h2>{e(p["why"]["title"])}</h2>
       </div>
       <div class="why__body">
@@ -163,42 +184,29 @@ def page(slug, p):
   <section class="section">
     <div class="wrap">
       <div class="get__head">
-        <span class="eyebrow">02 — What you'll get</span>
+        <span class="eyebrow">What you'll get</span>
         <h2>Everything <span class="accent">included</span></h2>
       </div>
-      <div class="get__list">
+      <div class="get__body">
+        <div>
 {get_items}
-      </div>{topics}
+        </div>{topics}
+      </div>
     </div>
   </section>
 {speakers}
-  <section class="section dark how">
+  <section class="section dark who">
     <div class="wrap">
-      <div class="how__col">
-        <span class="eyebrow">03 — How it works</span>
-        <div>
-{steps}
-        </div>
+      <div>
+        <span class="eyebrow">Who it's for</span>
+        <h2>Is this <span class="accent">for you?</span></h2>
       </div>
-      <div class="how__col">
-        <span class="eyebrow">04 — Who it's for</span>
-        <div>
+      <div>
 {checks(p["forList"], CHECK_DARK)}
-        </div>
-      </div>
+      </div>{how}
     </div>
   </section>
 {quote}{partner}
-  <section class="section">
-    <div class="note">
-      <img src="/assets/img/mickey-candid.jpg" alt="Mickey Salim" width="480" height="480" loading="lazy">
-      <div>
-        <p>{e(p["note"])}</p>
-        <p class="sign">Onwards and upwards, {e(p["signoff"])}</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section band related">
     <div class="wrap">
       <h2>You might <span class="accent">also like</span></h2>
