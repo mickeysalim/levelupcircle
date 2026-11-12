@@ -101,7 +101,8 @@ section[id] { scroll-margin-top: 72px; }
 .hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; transform: scale(1.32); transform-origin: 50% 24%; }
 @media (max-width: 860px) {
   .hero .wrap { grid-template-columns: 1fr; gap: 32px; }
-  .hero__photo { order: -1; justify-self: center; max-width: 260px; }
+  .hero__photo { order: -1; justify-self: center; width: 200px; max-width: 200px; aspect-ratio: 1; border-radius: 50%; border: 4px solid var(--sage); box-shadow: 0 12px 28px rgba(73, 52, 48, 0.14); }
+  .hero__photo img { object-position: 50% 0%; transform: scale(1.7); transform-origin: 50% 60%; }
   .hero__text { gap: 18px; }
   .hero__text .eyebrow { margin-bottom: -6px; }
 }
@@ -134,7 +135,7 @@ section[id] { scroll-margin-top: 72px; }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; border-top: 1px solid var(--ink); padding-top: 22px; margin-top: 8px; }
 .stat__num { display: block; font-family: var(--serif); font-weight: 900; font-size: 34px; color: var(--terra); line-height: 1.2; }
 .stat__label { font-size: 14px; line-height: 1.45; color: var(--ink-2); }
-.about__text .link-under { color: var(--ink); align-self: flex-start; margin-top: auto; }
+.about__text .link-under { color: var(--ink); align-self: flex-start; }
 .about__more { display: flex; flex-direction: column; gap: 20px; }
 @media (max-width: 860px) {
   .about .wrap { grid-template-columns: 1fr; gap: 40px; }
@@ -251,8 +252,8 @@ section[id] { scroll-margin-top: 72px; }
 /* ---------- Footer ---------- */
 .footer { background: var(--sage-dark); color: var(--on-dark); }
 .footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding-top: 32px; padding-bottom: 32px; }
-.footer__brand { display: flex; flex-direction: column; gap: 6px; }
-.footer__brand strong { font-family: var(--serif); font-weight: 900; font-size: 22px; }
+.footer__brand { display: flex; align-items: center; gap: 20px; }
+.footer__brand img { width: 84px; height: auto; }
 .footer__brand span { font-size: 13px; color: var(--on-dark-3); }
 .footer__links { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; font-size: 14px; font-weight: 500; }
 .footer__links a { text-decoration: none; padding: 12px 0; }
