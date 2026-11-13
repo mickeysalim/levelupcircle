@@ -162,7 +162,7 @@ def page(slug, p):
         <div class="buy__tags"><span class="eyebrow">{e(p["kicker"])}</span>{badge}</div>
         <h1>{e(p["t1"])} <span class="accent">{e(p["t2"])}</span></h1>
         <p class="lead">{e(p["hook"])}</p>
-        <p class="pull">"{e(p["coverQuote"])}" <span>— Mickey</span></p>{meta}
+{meta}
       </div>
       <div class="buycard">
         <div class="buycard__price"><strong>{e(p["price"])}</strong>{was}<span>{e(p["unit"])}</span></div>
