@@ -87,8 +87,24 @@ section[id] { scroll-margin-top: 72px; }
 .nav__links { display: flex; align-items: center; gap: 24px; }
 .nav__link { font-size: 14px; font-weight: 500; text-decoration: none; padding: 12px 0; border-bottom: 1.5px solid transparent; }
 .nav__link:hover, .nav__link.is-current { border-bottom-color: var(--terra); }
-@media (max-width: 560px) { .brand__logo { height: 38px; } .nav__name { font-size: 18px; } .nav__links { gap: 16px; } }
-@media (max-width: 380px) { .nav__name { font-size: 16px; } .nav__links { gap: 12px; } .nav__link { font-size: 13px; } }
+.nav__toggle { display: none; }
+.nav__name-short { display: none; }
+@media (max-width: 760px) {
+  .nav .wrap { position: relative; }
+  .nav__toggle { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; margin-right: -10px; padding: 10px; background: transparent; border: 0; cursor: pointer; }
+  .nav__toggle span { display: block; height: 2px; width: 100%; background: var(--ink); border-radius: 2px; transition: transform 0.25s ease, opacity 0.2s ease; }
+  .nav.is-open .nav__toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav.is-open .nav__toggle span:nth-child(2) { opacity: 0; }
+  .nav.is-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav__links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 16px 24px rgba(73, 52, 48, 0.08); padding: 4px var(--gutter) 12px; }
+  .nav.is-open .nav__links { display: flex; }
+  .nav__links a { font-family: var(--serif); font-weight: 700; font-size: 22px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .nav__links a:last-child { border-bottom: 0; }
+  .nav__link.is-current { border-bottom-color: var(--line); color: var(--terra); }
+  .nav__name-full { display: none; }
+  .nav__name-short { display: inline; }
+}
+@media (max-width: 560px) { .brand__logo { height: 38px; } }
 
 /* ---------- Hero ---------- */
 .hero { padding: clamp(40px, 7vw, 112px) 0 clamp(56px, 8vw, 120px); }
