@@ -46,6 +46,25 @@
     });
   });
 
+  // Programs page: filter tabs
+  var list = document.querySelector('[data-filter-list]');
+  if (list) {
+    var tabs = document.querySelectorAll('[data-filter]');
+    var rows = list.querySelectorAll('.row');
+    var empty = list.querySelector('.index-empty');
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var f = tab.getAttribute('data-filter'), shown = 0;
+        tabs.forEach(function (t) { t.setAttribute('aria-pressed', t === tab ? 'true' : 'false'); });
+        rows.forEach(function (r) {
+          var on = f === 'all' || r.getAttribute('data-tags').split(' ').indexOf(f) >= 0;
+          r.hidden = !on; if (on) shown++;
+        });
+        if (empty) empty.hidden = shown > 0;
+      });
+    });
+  }
+
   // Product page: sticky buy bar appears once the main buy button scrolls away
   var bar = document.querySelector('[data-buybar]');
   var anchor = document.querySelector('[data-buy-anchor]');

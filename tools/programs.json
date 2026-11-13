@@ -60,6 +60,11 @@
     "coverQuote": "Treat this like a challenge. Small steps every day add up.",
     "notFor": [
       "Not a done-for-you service. You make the edits yourself, with clear steps to follow."
+    ],
+    "listFormat": "Guidebook + recording",
+    "listBadge": "Start here",
+    "tags": [
+      "linkedin"
     ]
   },
   "working-in-singapore": {
@@ -126,6 +131,11 @@
     "coverQuote": "Singapore is very doable, as long as you know how it works.",
     "notFor": [
       "Not legal or immigration advice. For official rules, always check the Ministry of Manpower (MOM) website."
+    ],
+    "listFormat": "Guidebook + recording",
+    "listBadge": "Most popular",
+    "tags": [
+      "abroad"
     ]
   },
   "cv-audit": {
@@ -180,6 +190,11 @@
     "notFor": [
       "Not a CV rewrite. I tell you what to change and why, and you make the edits.",
       "Not a job guarantee. A stronger CV improves your chances, but hiring decisions are up to the company."
+    ],
+    "listFormat": "Written report",
+    "listBadge": "",
+    "tags": [
+      "linkedin"
     ]
   },
   "linkedin-audit": {
@@ -229,6 +244,11 @@
     "coverQuote": "A few small changes can make a big difference.",
     "notFor": [
       "Not a profile rewrite. You get a report with clear fixes, and you make the edits."
+    ],
+    "listFormat": "Written report",
+    "listBadge": "",
+    "tags": [
+      "linkedin"
     ]
   },
   "one-on-one": {
@@ -287,6 +307,11 @@
     "coverQuote": "Bring your questions, big or small. You'll leave with a plan.",
     "notFor": [
       "Not a job placement or referral service."
+    ],
+    "listFormat": "Live, 1 hour",
+    "listBadge": "",
+    "tags": [
+      "personal"
     ]
   },
   "study-in-singapore": {
@@ -369,6 +394,11 @@
     "coverQuote": "Hearing it from someone who's been there makes all the difference.",
     "notFor": [
       "Not a school admissions or scholarship application service."
+    ],
+    "listFormat": "Guidebook + recording",
+    "listBadge": "With Sentre",
+    "tags": [
+      "study"
     ]
   }
 }
