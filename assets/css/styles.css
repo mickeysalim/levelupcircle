@@ -272,7 +272,10 @@ section[id] { scroll-margin-top: 72px; }
 .footer__links { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; font-size: 14px; font-weight: 500; }
 .footer__links a { text-decoration: none; padding: 12px 0; }
 .footer__links a:hover { text-decoration: underline; }
-.footer__links .ig-main { color: var(--peach); }
+.social { display: flex; align-items: center; gap: 4px; margin-right: 8px; }
+.footer__links .social a { width: 44px; height: 44px; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--peach); transition: background 0.2s ease, color 0.2s ease; }
+.footer__links .social a:hover { background: rgba(242, 238, 234, 0.1); color: var(--on-dark); text-decoration: none; }
+@media (max-width: 640px) { .social { margin-left: -12px; } }
 .footer__links .top { color: var(--on-dark-3); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; }
 
 /* ---------- Product page ---------- */
