@@ -151,7 +151,7 @@ def page(slug, p):
 <nav class="nav" aria-label="Main">
   <div class="wrap">
     <a href="../index.html" class="brand" aria-label="Level Up Circle, home"><img class="brand__logo" src="/assets/img/level-up-circle-logo.png" alt="Level Up Circle" width="516" height="493"></a>
-    <div class="nav__links"><a href="/programs" class="nav__link">Programs</a><a href="../index.html#about" class="nav__name">Mickey Salim</a></div>
+    <div class="nav__links"><a href="/" class="nav__link">Home</a><a href="/programs" class="nav__link is-current">Programs</a><a href="../index.html#about" class="nav__name">Mickey Salim</a></div>
   </div>
 </nav>
 
@@ -266,7 +266,7 @@ def programs_page():
 <nav class="nav" aria-label="Main">
   <div class="wrap">
     <a href="/" class="brand" aria-label="Level Up Circle, home"><img class="brand__logo" src="/assets/img/level-up-circle-logo.png" alt="Level Up Circle" width="516" height="493"></a>
-    <div class="nav__links"><a href="/programs" class="nav__link is-current" aria-current="page">Programs</a><a href="/#about" class="nav__name">Mickey Salim</a></div>
+    <div class="nav__links"><a href="/" class="nav__link">Home</a><a href="/programs" class="nav__link is-current" aria-current="page">Programs</a><a href="/#about" class="nav__name">Mickey Salim</a></div>
   </div>
 </nav>
 

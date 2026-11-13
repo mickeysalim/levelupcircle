@@ -87,7 +87,8 @@ section[id] { scroll-margin-top: 72px; }
 .nav__links { display: flex; align-items: center; gap: 24px; }
 .nav__link { font-size: 14px; font-weight: 500; text-decoration: none; padding: 12px 0; border-bottom: 1.5px solid transparent; }
 .nav__link:hover, .nav__link.is-current { border-bottom-color: var(--terra); }
-@media (max-width: 560px) { .brand__logo { height: 38px; } .nav__name { font-size: 18px; } .nav__links { gap: 18px; } }
+@media (max-width: 560px) { .brand__logo { height: 38px; } .nav__name { font-size: 18px; } .nav__links { gap: 16px; } }
+@media (max-width: 380px) { .nav__name { font-size: 16px; } .nav__links { gap: 12px; } .nav__link { font-size: 13px; } }
 
 /* ---------- Hero ---------- */
 .hero { padding: clamp(40px, 7vw, 112px) 0 clamp(56px, 8vw, 120px); }
